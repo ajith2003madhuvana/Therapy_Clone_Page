@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Intro: React.FC = () => {
   return (
-    <section className="relative bg-[#ECE8E1] px-6 md:px-12 py-20 border-t border-black/5 overflow-hidden">
+    <section className="relative bg-[#ECE8E1] px-4 sm:px-6 md:px-12 py-16 sm:py-20 border-t border-black/5 overflow-hidden">
       
       {/* Image – detached from layout */}
-      <div className="absolute top-0 right-0 h-full w-full md:w-1/2">
+      <div className="absolute top-0 right-0 h-full w-full md:w-1/2 order-2 md:order-1">
         <img
           src="/images/Intro.png"
           alt="Calm, neutral therapy office with natural light"
@@ -14,15 +15,15 @@ const Intro: React.FC = () => {
       </div>
 
       {/* Content */}
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
         
         {/* Text */}
-        <div className="space-y-10">
-          <h2 className="text-[42px] md:text-[56px] leading-[1.15] text-[#24302A] font-normal">
+        <div className="space-y-6 sm:space-y-8 md:space-y-10 order-1 md:order-1">
+          <h2 className="text-3xl sm:text-5xl md:text-[42px] lg:text-[56px] leading-tight md:leading-[1.15] text-[#24302A] font-normal">
             A supportive space to slow down, reflect, and heal
           </h2>
 
-          <div className="space-y-8 text-[17px] leading-[1.7] text-[#5F6D64] max-w-xl">
+          <div className="space-y-6 sm:space-y-8 text-sm sm:text-base md:text-[17px] leading-relaxed md:leading-[1.7] text-[#5F6D64] max-w-xl">
             <p>
               Many adults I work with appear capable and put-together on the
               outside, while internally feeling overwhelmed, tense, or emotionally
@@ -36,12 +37,12 @@ const Intro: React.FC = () => {
             </p>
           </div>
 
-          <a
-            href="#contact"
-            className="inline-block px-10 py-4 rounded-full bg-[#6F8F7A] text-white uppercase tracking-[0.12em] text-xs font-medium hover:opacity-90 transition"
+          <Link
+            to="/contact"
+            className="inline-block px-6 sm:px-8 md:px-10 py-3 sm:py-4 rounded-full bg-[#6F8F7A] text-white uppercase tracking-[0.12em] text-[10px] sm:text-xs md:text-xs font-medium hover:opacity-90 transition"
           >
             Schedule a Consultation
-          </a>
+          </Link>
         </div>
 
         {/* Empty column keeps grid balance */}

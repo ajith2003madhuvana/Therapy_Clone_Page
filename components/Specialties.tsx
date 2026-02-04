@@ -56,7 +56,7 @@ const Specialties: React.FC = () => {
             Expertise
           </h2>
           <h3 className="text-5xl md:text-[4.5rem] text-[#24302A] leading-none font-normal">
-            My Specialties
+            My Specialities
           </h3>
         </div>
 

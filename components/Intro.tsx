@@ -40,8 +40,17 @@ const Intro: React.FC = () => {
         </div>
 
           {/* Image - appears below text on mobile */}
-          <div className="w-full h-[300px] sm:h-[400px] md:h-auto md:absolute md:top-0 md:right-0 md:w-1/2 md:h-full">
-            <img
+<div
+  className="
+    w-full h-[300px] sm:h-[400px]
+    md:h-auto md:absolute md:top-0 md:right-0 md:w-1/2 md:h-full
+    overflow-hidden
+    rounded-2xl
+    md:rounded-3xl
+  "
+>
+
+        <img
               src="/images/Intro.png"
               alt="Calm, neutral therapy office with natural light"
               className="w-full h-full object-cover"

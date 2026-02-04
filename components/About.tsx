@@ -36,7 +36,7 @@ const About: React.FC = () => {
 
         {/* Image */}
         <div className="order-1 lg:order-2 flex justify-center relative">
-          <div className="w-full aspect-[4/5] max-w-lg rounded-t-full overflow-hidden">
+          <div className="w-full max-w-md aspect-[4/5] rounded-2xl overflow-hidden">
             <img
               src="/images/Maya.png"
               alt="Portrait of Dr. Maya Reynolds"

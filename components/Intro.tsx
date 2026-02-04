@@ -5,20 +5,14 @@ const Intro: React.FC = () => {
   return (
     <section className="relative bg-[#ECE8E1] px-4 sm:px-6 md:px-12 py-16 sm:py-20 border-t border-black/5 overflow-hidden">
       
-      {/* Image – detached from layout */}
-      <div className="absolute top-0 right-0 h-full w-full md:w-1/2 order-2 md:order-1">
-        <img
-          src="/images/Intro.png"
-          alt="Calm, neutral therapy office with natural light"
-          className="w-full h-full object-cover"
-        />
-      </div>
-
-      {/* Content */}
-      <div className="relative max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 items-center">
+      {/* Content Wrapper */}
+      <div className="relative max-w-7xl mx-auto">
         
-        {/* Text */}
-        <div className="space-y-6 sm:space-y-8 md:space-y-10 order-1 md:order-1">
+        {/* Mobile: Content first, then Image */}
+        <div className="flex flex-col md:grid md:grid-cols-2 md:gap-16 md:items-center">
+          
+          {/* Text Content */}
+          <div className="space-y-6 sm:space-y-8 md:space-y-10 mb-8 md:mb-0">
           <h2 className="text-3xl sm:text-5xl md:text-[42px] lg:text-[56px] leading-tight md:leading-[1.15] text-[#24302A] font-normal">
             A supportive space to slow down, reflect, and heal
           </h2>
@@ -45,8 +39,16 @@ const Intro: React.FC = () => {
           </Link>
         </div>
 
-        {/* Empty column keeps grid balance */}
-        <div />
+          {/* Image - appears below text on mobile */}
+          <div className="w-full h-[300px] sm:h-[400px] md:h-auto md:absolute md:top-0 md:right-0 md:w-1/2 md:h-full">
+            <img
+              src="/images/Intro.png"
+              alt="Calm, neutral therapy office with natural light"
+              className="w-full h-full object-cover"
+            />
+          </div>
+
+        </div>
       </div>
     </section>
   );
